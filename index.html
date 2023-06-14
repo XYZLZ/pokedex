@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica 3</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <form  class="form_search" id="form">
+            <input type="search" name="busqueda" id="busqueda" placeholder="Buscar"  required>
+            <button type="submit" class="btn_search" id="btn"><i class='bx bx-search'></i></button>
+        </form>
+        <div class="card">
+            <div class="card__header left-colum">
+                <h1 class="card__tile" id="pokeName">pokemon</h1>
+                <h2 class="card__subtitle" id="pokeId">#0</h2>
+                <img src="img/default.png" alt="pokemon" id="pokeImg">
+            </div>
+
+            <div class="card__body right-colum">
+                <div class="card__basic-info">
+                    <div>
+                        <h3 class="top" id="hight">Height:</h3>
+                        <h3 id="weight">Weight:</h3>
+                    </div>
+
+                    <div>
+                        <h3 class="top" id="category">Category:</h3>
+                        <h3 id="type">Type:</h3>
+                    </div>
+                </div>
+    
+                <h2>Abilities</h2>
+                <ul class="abilities">
+                    <li>Habilidades
+                        <div class="hInfo"><!-- JS --></div>
+                    </li>
+                </ul>
+
+                <h2>Weaknesses</h2>
+                <ul class="weaknesses">
+                    <li>Hability</li>
+                </ul>
+
+                <div class="skils">
+                    <div class="divisor-1">
+                        <div class="bar">
+                            <div class="info stats" id="hp">HP<span></span></div>
+                            <div class="line hp"><span></span></div>
+                        </div>
+                        <div class="bar">
+                            <div class="info stats" id="attack">Attack<span></span></div>
+                            <div class="line attack"><span></span></div>
+                        </div>
+                    </div>
+
+                    <div class="divisor-2">
+                        <div class="bar">
+                            <div class="info stats" id="defense">Defense<span></span></div>
+                            <div class="line defense"><span></span></div>
+                        </div>
+                        <div class="bar">
+                            <div class="info stats" id="s_attack">S Attack<span></span></div>
+                            <div class="line s_attack"><span></span></div>
+                        </div>
+                    </div>
+
+                    <div class="divisor-3">
+                        <div class="bar">
+                            <div class="info stats" id="s_defense">S Defense<span></span></div>
+                            <div class="line s_defense"><span></span></div>
+                        </div>
+                        <div class="bar">
+                            <div class="info stats" id="speed">Speed<span></span></div>
+                            <div class="line speed"><span></span></div>
+                        </div>
+                    </div>
+            </div>
+
+
+            <div class="evolutions">
+                <div class=" evo evo_1">
+                    <img src="img/default.png"  alt="" class="evol_img " id="evol_1">
+                    <span class="evo_arrow"> > </span>
+                </div>
+                <div class=" evo evo_2">
+                    <img src="img/default.png"  alt="" class="evol_img evol_2">
+                    <span class="evo_arrow"> > </span>
+                </div>
+                <div class=" evo evo_3">
+                    <img src="img/default.png"  alt="" class="evol_img evol_3">
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+
+    <script src="js/functions.js" type="module"></script>
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>
+
+
+
+
+
+
+    <!-- <form action="">
+        <input type="search" name="poke_input" id="poke_input">
+        <button type="submit" id="btn">Buscar</button>
+    </form>
+    <ul>
+        <li class="name" id="name"></li>
+        <li class="weight" id="weight"></li>
+        <li class="height" id="height"></li>
+        <li class="abilities">
+            habilidades:
+            <ul>
+                
+            </ul>
+        </li>
+        <li>
+            stats:
+            <ul>
+                <li class="stats"></li>
+                <li class="stats"></li>
+                <li class="stats"></li>
+                <li class="stats"></li>
+                <li class="stats"></li>
+                <li class="stats"></li>
+            </ul>
+        </li>
+        <img id="imgPokemon">
+    </ul> -->

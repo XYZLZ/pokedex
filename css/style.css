@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+:root{
+
+    /* ? Pokemon colors */
+    --water:#7380ec;
+    --fire:#f83e4e;
+    --normal:#B09308;
+    --ice:#AFEAFD;
+    --grass:#41f1b6;
+    --electric:#ffbb55;
+    --rock:#7d8da1;
+    --flying:#7AE7C7;
+    --psychic:#FFC6D9;
+    --ghost:#561D25;
+    --bug:#A2FAA3;
+    --poison:#795663;
+    --ground:#D2B074;
+    --dragon:#DA627D;
+    --steel:#1D9A99;
+    --fighting:#494949;
+    --fairy:#e9e6e6;
+    --dark:#1a1919;
+    --default:#2A1A1F;
+
+
+    --color-white:#fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f2f2f2;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+/* ? ************************** Buscador ************************ */
+
+.form_search{
+    display: inline-block;
+    margin-left: 40px;
+    position: relative;
+}
+
+.form_search input{
+    width: 300px;
+    height: 47px;
+    padding: 0 10px;
+    border-radius: 50px;
+    background: var(--color-white);
+    color: var(--fighting);
+    border: none;
+    outline: none;
+}
+
+.form_search input::placeholder{
+    color: var(--fighting);
+}
+
+.form_search i {
+    font-size: 1.3rem;
+    color: var(--color-white);
+}
+
+.form_search .btn_search{
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    padding: 0 10px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    width: 50px;
+    height: 47px;
+    background: var(--grass) !important;
+    color: var(--color-dark);
+    border: none;
+    outline: none;
+    
+}
+
+
+/* ? ************************** Card ************************ */
+
+.card{
+    background-color: var(--color-white);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .2);
+    display: flex;
+    margin: 1.5rem;
+    overflow: hidden;
+    width: 44rem;
+    height: 35rem;
+}
+
+.card h2{
+    letter-spacing: 0.1rem;
+    margin: 1rem 0;
+    color: var(--fighting);
+}
+
+
+/* ? ************************** Card Header ************************ */
+
+.card__header{
+    color: var(--color-white);
+    padding: 2rem;
+    max-width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--water);
+}
+
+.card__header .card__tile{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.card__header .card__subtitle{
+    font-size: 2rem;
+    color: var(--color-white);
+}
+
+.card__header img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* ? ************************** Card Body ************************ */
+
+.card__body{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.card__basic-info{
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+    /* align-items: end; */
+    text-align: center; 
+    font-size: 0.85rem;
+}
+
+.card__basic-info div h3{
+    color: var(--fighting);
+    font-weight: 600;
+}
+
+.card__basic-info .top{
+    margin-bottom: 20px;
+}
+
+.card__basic-info h2{
+    margin: auto;
+}
+
+.card__body p{
+    font-size: 0.9rem;
+}
+
+.card__body .abilities, .weaknesses{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.card__body .abilities li{
+    cursor: pointer;
+}
+
+.card__body .abilities li .hInfo0,.hInfo1, .hInfo2, .hInfo3, .hInfo4, .hInfo5{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 12rem 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .8);
+    color: var(--color-white);
+    font-size: 0.82rem;
+    /* transition: all .5s; */
+    z-index: 999;
+    display: none;
+}
+/* .card__body .abilities li .hInfo::before{
+    content: '';
+    position: absolute;
+    
+    display: none;
+} */
+
+/* .card__body .abilities li .hInfo0::after,.hInfo1::after, .hInfo2::after, .hInfo3::after, .hInfo4::after, .hInfo5::after{
+    content: '-X-';
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    border-bottom-right-radius: 7px;
+    background-color: var(--water);
+    color: var(--color-white);
+    width: 2rem;
+    height: 2rem;
+    z-index: 9999;
+    
+} */
+
+.card__body .abilities li .closeInfo0, .closeInfo1, .closeInfo2, .closeInfo3, .closeInfo4, .closeInfo5{
+    text-decoration: none;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 8px 30px;
+    background-color: var(--water);
+    color: var(--color-white);
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+/* ? ************************** skils   ************************ */
+.card__body .skils{
+    padding: 2rem;
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    /* box-shadow: 5px 5px 10px rgba(0, 0, 0, .2); */
+}
+
+.card__body .skils .bar{
+    margin: 20px 0;
+}
+
+.card__body .skils .bar:first-child{
+    margin-top: 0;
+}
+
+.card__body .skils .bar .info{
+    margin-bottom: 5px;
+    display: inline;
+    font-size: .8rem;
+}
+
+.card__body .skils .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.card__body .skils .bar .line{
+    position: relative;
+    height: 10px;
+    width: 6.8rem;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transform: scaleX(0); /* ! OJO */
+    transform-origin: left;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .5),
+                    0px 1px rgba(255, 255, 255, .8);
+
+    animation: skils 1s cubic-bezier(1,0,0.5,1) forwards;
+    animation-fill-mode: both;
+
+}
+
+.card__body .skils .bar .line span{
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    background: #6665ee;
+    /* color: var(--color-white); */
+    border-radius: 10px;
+    position: absolute;
+    transform: scaleX(0); /* ! OJO */
+    transform-origin: left;
+    animation: skils 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    animation-fill-mode: both;
+}
+
+/* .card__body .skils .bar .line span::before{
+    position: absolute;
+    content: '';
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-top-color: #000;
+}
+
+.card__body .skils .bar .line span::after{
+    position: absolute;
+    content: '100%';
+    right: 0;
+    top: -28px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    background: #000;
+    padding: 1px 8px;
+    border-radius: 3px;
+    
+} */
+
+
+/* .card__body .skils .bar .line.hp span{
+    width: 70%;
+}
+.card__body .skils .bar .line.attack span{
+    width: 80%;
+} */
+
+.none{
+    display: none;
+}
+
+.block{
+    display: block;
+}
+
+
+
+.card__body .evolutions{
+    /* margin-left: 40px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.card__body .evolutions .evo{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.card__body .evolutions img{
+    width: 50%;
+    object-fit: cover;
+    padding: 10px;
+    border: 2px solid var(--water);
+    border-radius: 50%;
+}
+
+.card__body .evolutions .evo_arrow{
+    font-size: 1.7rem;
+    color: var(--water);
+}
+
+
+@keyframes skils{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+/* 
+@media (max-width:468px){
+    .card{
+        flex-direction: column;
+    }
+
+    .card__header{
+        flex-direction: row;
+    }
+} */
+
+
